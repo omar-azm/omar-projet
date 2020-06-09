@@ -218,164 +218,56 @@
                 <div class="row">
                     <div class="col-lg-9 col-sm-8">
                         <form class="cartContent clearfix" method="post"
-                            action="https://rocket-elevators.frederic2ec.tk/quote#">
+                            action="">
                             <fieldset>
                                 <div class="row">
-                                    <div class="col-md-4"><label for="contact:name">Full Name</label><input
+                                    <div class="col-md-6"><label for="contact:name">Nom et Prénom</label><input
                                             class="form-control" required="" type="text" value=""></div>
-                                    <div class="col-md-4"><label for="contact:email">E-mail Address</label><input
-                                            class="form-control" required="" type="email" value=""></div>
-                                    <div class="col-md-4"><label for="contact:phone">Phone</label><input
-                                            class="form-control" type="text" value=""></div>
-                                </div>
+                                    <div class="col-md-6"><label for="contact:email">Addresse Email</label><input
+											class="form-control" required="" type="email" value=""></div>
+								</div>
+								
+								<div class="row">
+                                    <div class="col-md-6"><label for="contact:phone">Téléphone</label><input
+											class="form-control" type="text" value=""></div>
+									<div class="col-md-6"><label for="contact:subject">Nom de l'entreprise</label><input
+											class="form-control" required="" type="text" value=""></div>
+								</div>
+								
                                 <div class="row">
-                                    <div class="col-md-4"><label for="contact:subject">Business Name</label><input
+                                    
+                                    <div class="col-md-6"><label for="contact:subject">Nom du projet</label><input
                                             class="form-control" required="" type="text" value=""></div>
-                                    <div class="col-md-4"><label for="contact:subject">Project Name</label><input
-                                            class="form-control" required="" type="text" value=""></div>
-                                    <div class="col-md-4"><label for="contact_department">Building Type</label><select
-                                            class="form-control pointer" id="building-select">
-                                            <option value="">--- Select ---</option>
-                                            <option value="Residential">Residential</option>
+                                    <div class="col-md-6">
+										<label for="contact_department">Type de Bâtiment</label>
+										<select class="form-control pointer" id="building-select">
+                                            <option value=""> Selectioné </option>
+                                            <option value="Residential">Résidentiel</option>
                                             <option value="Commercial">Commercial</option>
-                                            <option value="Corporate">Corporate</option>
-                                            <option value="Hybrid">Hybrid</option>
+                                            <option value="Corporate">Corporatif</option>
+                                            <option value="Hybrid">Hybride</option>
                                         </select></div>
-                                </div>
-                                <hr><!-- Residential-->
-                                <div class="row" id="residential-form" style="display: none;">
-                                    <div class="col-md-4"><label for="contact:subject">Number of apartment</label><input
-                                            class="form-control" required="" type="text" value=""
-                                            id="residential-apartment"></div>
-                                    <div class="col-md-4"><label for="contact:subject">Number of floor</label><input
-                                            class="form-control" required="" type="text" value=""
-                                            id="residential-floor"></div>
-                                    <div class="col-md-4"><label for="contact:subject">Number of basement</label><input
-                                            class="form-control" required="" type="text" value=""
-                                            name="contact[subject][required]" id="contact:subject"></div>
-                                </div><!-- Commercial-->
-                                <div id="commercial-form" style="display: none;">
-                                <div class="row">
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                business</label><input class="form-control" required="" type="text"
-                                                value="" name="contact[subject][required]" id="contact:subject"></div>
-                                            <div class="col-md-4"><label for="contact:subject">Number of floor</label><input
-                                                class="form-control" required="" type="text" value=""
-                                                name="contact[subject][required]" id="contact:subject"></div>
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                basement</label><input class="form-control" required="" type="text"
-                                                value="" name="contact[subject][required]" id="contact:subject"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6"><label for="contact:subject">Number of
-                                                parking</label><input class="form-control" required="" type="text"
-                                                value="" name="contact[subject][required]" id="contact:subject"></div>
-                                        <div class="col-md-6"><label for="contact:subject">Number of shaft</label><input
-                                                class="form-control" required="" type="text" value=""
-                                                id="commercial-shaft"></div>
-                                    </div>
-                                </div><!-- Corporate-->
-                                <div id="corporate-form" style="display: none;">
-                                    <div class="row">
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                companies</label><input class="form-control" required="" type="text"
-                                                value="" name="contact[subject][required]" id="contact:subject"></div>
-                                        <div class="col-md-4"><label for="contact:subject">Number of floor</label><input
-                                                class="form-control" required="" type="text" value=""
-                                                id="corporate-floor"></div>
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                basement</label><input class="form-control" required="" type="text"
-                                                value="" id="corporate-basement"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6"><label for="contact:subject">Number of
-                                                parking</label><input class="form-control" required="" type="text"
-                                                value="" name="contact[subject][required]" id="contact:subject"></div>
-                                        <div class="col-md-6"><label for="contact:subject">Number of
-                                                occupant/floor</label><input class="form-control" required=""
-                                                type="text" value="" id="corporate-occupant"></div>
-                                    </div>
-                                </div><!-- Hybrid-->
-                                <div id="hybrid-form" style="display: none;">
-                                    <div class="row">
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                business</label><input class="form-control" required="" type="text"
-                                                value="" name="contact[subject][required]" id="contact:subject"></div>
-                                        <div class="col-md-4"><label for="contact:subject">Number of floor</label><input
-                                                class="form-control" required="" type="text" value="" id="hybrid-floor">
-                                        </div>
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                basement</label><input class="form-control" required="" type="text"
-                                                value="" id="hybrid-basement"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                parking</label><input class="form-control" required="" type="text"
-                                                value="" name="contact[subject][required]" id="contact:subject"></div>
-                                        <div class="col-md-4"><label for="contact:subject">Number of
-                                                occupant/floor</label><input class="form-control" required=""
-                                                type="text" value="" id="hybrid-occupant"></div>
-                                        <div class="col-md-4"><label for="contact_department">Active
-                                                hours/day</label><select class="form-control pointer"
-                                                name="contact[department]">
-                                                <option value="">--- Select ---</option>
-                                                <option value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                                <option value="13">13</option>
-                                                <option value="14">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
-                                                <option value="21">21</option>
-                                                <option value="22">22</option>
-                                                <option value="23">23</option>
-                                                <option value="24">24</option>
-                                            </select></div>
-                                    </div>
-                                </div><!-- Quality-->
-                                <div class="row">
-                                    <div class="col-md-12"><label class="radio"><input type="radio" name="quality-radio"
-                                                value="standard" checked="checked"><i></i>Standard</label><label
-                                            class="radio"><input type="radio" name="quality-radio"
-                                                value="premium"><i></i>Premium</label><label class="radio"><input
-                                                type="radio" name="quality-radio"
-                                                value="excelium"><i></i>Excelium</label></div>
-                                </div>
+								</div>
+								
+								
+                                    
+								<div class="col-md-20">
+									<label class="radio"> Standard</label> 
+									 <input type="radio" name="quality-radio" value="">
+									 <label class="radio">Premium</label> 
+									 <input type="radio" name="quality-radio" value="">
+									 <label class="radio">Excelium</label> 
+									 <input type="radio" name="quality-radio" value="">
+                                    
+                                
+                                
+									</div>
+								</div><!-- Quality-->
+                                
                             </fieldset>
                         </form>
                     </div>
-                    <div class="col-lg-3 col-sm-4">
-                        <div class="toggle-transparent toggle-bordered-full clearfix">
-                            <div class="toggle active">
-                                <div class="toggle-content" style="display: block;"><span class="clearfix"><span
-                                            class="float-right" id="elevator-number">--</span><span
-                                            class="float-left">Number of elevator:</span></span><span
-                                        class="clearfix"><span class="float-right" id="elevator-price">--</span><span
-                                            class="float-left">Price/elevator:</span></span><span class="clearfix"><span
-                                            class="float-right" id="elevator-subtotal">--</span><span
-                                            class="float-left">Subtotal:</span></span><span class="clearfix"><span
-                                            class="float-right" id="elevator-fee">--</span><span
-                                            class="float-left">Install fee:</span></span>
-                                    <hr><span class="clearfix"><span class="float-right fs-20"
-                                            id="elevator-total">--</span><strong
-                                            class="float-left">TOTAL:</strong></span></div>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </section>
