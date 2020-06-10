@@ -5,7 +5,7 @@
 		<title>Smarty - Multipurpose + Admin</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
-
+		
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -212,7 +212,7 @@
 
      <div>
 		<form class="cartContent clearfix" method="post"
-		action="https://rocket-elevators.frederic2ec.tk/quote#">
+		>
 		<section>
             <div class="container">
                 <div class="row">
@@ -247,24 +247,40 @@
                                             <option value="Corporate">Corporatif</option>
                                             <option value="Hybrid">Hybride</option>
                                         </select></div>
+							</div>
+								<!-- résidentiel-->
+
+							<div class="row" id="residential-form">
+
+								<div class="col-md-4"><label for="contact:subject">Nombre d'appartements</label><input
+										class="form-control" required="" type="text" value=""
+										id="residential-apartment"></div>
+								<div class="col-md-4"><label for="contact:subject">Nombre de sous-sols </label><input
+										class="form-control" required="" type="text" value=""
+										id="residential-floor"></div>
+									
+										<div class="col-md-4"><label for="contact:subject">Nombre d'étages</label><input
+										class="form-control" required="" type="text" value=""
+										name="contact[subject][required]" id="contact:subject"></div>
 								</div>
+							</div>
+							
+							       
+
+									<label for="radio">
+										<input type="radio" name="quality-radio" value="standard" checked="checked"><i>
+										</i>Standard</label>
+											<label for="radio">
+											<input type="radio" name="quality-radio"
+											value="premium"><i></i>Premium</label>
+											<label for="radio"><input
+											type="radio" name="quality-radio"
+											value="excelium"><i></i>Excelium</label>
 								
 								
-                                    
-								<div class="col-md-20">
-									<label class="radio"> Standard</label> 
-									 <input type="radio" name="quality-radio" value="">
-									 <label class="radio">Premium</label> 
-									 <input type="radio" name="quality-radio" value="">
-									 <label class="radio">Excelium</label> 
-									 <input type="radio" name="quality-radio" value="">
-                                    
+						</div><!-- Quality-->
                                 
-                                
-									</div>
-								</div><!-- Quality-->
-                                
-                            </fieldset>
+                        </fieldset>
                         </form>
                     </div>
                 
@@ -344,7 +360,7 @@
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-
+        <script src= "assets/plugins/formulaire.js"></script>
 		<!-- LAYER SLIDER -->
 		<script src="assets/plugins/slider.layerslider/js/layerslider_pack.js"></script>
 

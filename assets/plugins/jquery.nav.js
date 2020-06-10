@@ -228,3 +228,25 @@
 	};
 
 })( jQuery, window , document );
+
+$$(document).ready(function () {
+	hideAllForm();
+	clearForm();
+	// Building type change
+	$("#building-select").change(function () {
+	  hideAllForm();
+	  clearForm();
+	  const value = $("#building-select").val();
+	  if (value === "Residential") {
+		$("#residential-form").show();
+	  } else if (value === "Commercial") {
+		$("#commercial-form").show();
+	  } else if (value === "Corporate") {
+		$("#corporate-form").show();
+	  } else if (value === "Hybrid") {
+		$("#hybrid-form").show();
+	  } else {
+		hideAllForm();
+	  }
+	});
+});
